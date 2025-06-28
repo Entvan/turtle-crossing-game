@@ -23,6 +23,6 @@ This project was created as part of a capstone project of 100 Days of Python cou
 
 ### Installation
 ```bash
-git clone https://github.com/YOURUSERNAME/turtle-crossing-game.git
+git clone https://github.com/entvan/turtle-crossing-game.git
 cd turtle-crossing-game
 python main.py

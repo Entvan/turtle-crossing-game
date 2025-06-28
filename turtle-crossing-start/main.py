@@ -28,13 +28,16 @@ while game_is_on:
         car_manager.add_car()
     time.sleep(0.1)
     screen.update()
+
     car_manager.car_move()
 
-    if player.ycor() == FINISH_LINE_Y:
+    # Detect successful crossing and lvl up
+    if player.ycor() >= FINISH_LINE_Y:
         player.restart_position()
         scoreboard.update_scoreboard()
         car_manager.car_speed += MOVE_INCREMENT
 
+    # Detect collision with a car
     for car in car_manager.cars:
         if car.distance(player) < 20:
             game_is_on = False
